@@ -31,6 +31,7 @@ def final_qualification_by_criteria_of_qualification_in_matter_of_algorithms():
         total_qualification = __get_qualification_percent(__average(partials), AVERAGE_PARTIALS)        
         total_qualification += __get_qualification_percent(final_exam_qualification, FINAL_EXAM)
         total_qualification += __get_qualification_percent(final_work_qualification, FINAL_WORK)
+        
         print 'Total qualification: ' + str(total_qualification)
     else:
         print 'Qualification must be between 0 and 10'
