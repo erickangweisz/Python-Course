@@ -19,7 +19,7 @@ def final_qualification_by_criteria_of_qualification_in_matter_of_algorithms():
         final_exam_qualification = float(input('Enter qualification of final exam:\n'))
         final_work_qualification = float(input('Enter qualification of final work:\n'))
     except:
-        print 'Qualification must be a number'
+        print ('Qualification must be a number')
 
     if (__qualification_in_range(partial_1)
     and __qualification_in_range(partial_2)
@@ -32,9 +32,9 @@ def final_qualification_by_criteria_of_qualification_in_matter_of_algorithms():
         total_qualification += __get_qualification_percent(final_exam_qualification, FINAL_EXAM)
         total_qualification += __get_qualification_percent(final_work_qualification, FINAL_WORK)
         
-        print 'Total qualification: ' + str(total_qualification)
+        print ('Total qualification: ' + str(total_qualification))
     else:
-        print 'Qualification must be between 0 and 10'
+        print ('Qualification must be between 0 and 10')
 
 def __qualification_in_range(qualification):
     if qualification >= 0 and qualification <= 10:
