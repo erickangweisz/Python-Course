@@ -11,7 +11,6 @@ class Point():
         self.y = y
         print('New Point Created')
 
-# global variables
 user_inputs = []
 x_y = ['x', 'y']
 
