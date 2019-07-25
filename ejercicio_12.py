@@ -18,14 +18,14 @@ def main():
     create_points_with_user_inputs()
 
 def create_points_with_user_inputs():
-    __set_user_inputs()
+    get_user_input()
     point_1 = Point(user_inputs[0], user_inputs[1])
-    __set_user_inputs()
+    get_user_input()
     point_2 = Point(user_inputs[2], user_inputs[3])
 
     __calculate_diference_between_two_points(point_1, point_2)
 
-def __set_user_inputs():
+def get_user_input():
     try:
         for index in range(2):
             user_input = float(input('Enter ' + x_y[index] + ' value:\n'))

@@ -10,7 +10,13 @@ AVERAGE_PARTIALS = 55
 FINAL_EXAM = 30
 FINAL_WORK = 15
 
-def final_qualification_by_criteria_of_qualification_in_matter_of_algorithms():
+def main():
+    get_user_input()
+    calculate_final_qualification_by_criteria_of_qualification_in_matter_of_algorithms()
+    
+def get_user_input():
+    global partial_1, partial_2, partial_3
+    global final_exam_qualification, final_work_qualification
     try:
         partial_1 = float(input('Enter qualification of first partial:\n'))
         partial_2 = float(input('Enter qualification of second partial:\n'))
@@ -21,6 +27,7 @@ def final_qualification_by_criteria_of_qualification_in_matter_of_algorithms():
     except:
         print ('Qualification must be a number')
 
+def calculate_final_qualification_by_criteria_of_qualification_in_matter_of_algorithms():
     if (__qualification_in_range(partial_1)
     and __qualification_in_range(partial_2)
     and __qualification_in_range(partial_3)
@@ -48,4 +55,4 @@ def __get_qualification_percent(qualification, percent):
 def __average(list):
     return sum(list) / len(list)
 
-final_qualification_by_criteria_of_qualification_in_matter_of_algorithms()
+main()

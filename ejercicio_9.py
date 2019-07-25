@@ -4,12 +4,21 @@
 
 PERCENTAGE = 15
 
-def get_15_percent_discount_of_purchase():
-    total_price = float(raw_input('Enter total price of purchase:\n'))
+def main():
+    get_input_user()
+    calculate_15_percent_discount_of_purchase()
+    print_15_percent_discount_of_purchase()
+
+def get_input_user():
+    global total_price
+    total_price = float(input('Enter total price of purchase:\n'))
+
+def calculate_15_percent_discount_of_purchase():
+    global final_price
     discount = ((total_price * PERCENTAGE) / 100)
     final_price = total_price - discount
     
-    print final_price
+def print_15_percent_discount_of_purchase():
+    print (final_price)
 
-get_15_percent_discount_of_purchase()
-
+main()

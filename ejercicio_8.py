@@ -6,13 +6,22 @@
 # cuenta su sueldo base y comisiones.
 PERCENTAGE = 10
 
-def print_comissions_to_pay_and_total_amount():
-    base_salary = float(raw_input('Enter base salary:\n'))
-    number_of_comissions = float(raw_input('Enter number of comissions:\n'))
+def main():
+    get_user_input()
+    calculate_comissions_to_pay_and_total_amount()
+    print_comissions_to_pay_and_total_amount()
 
+def get_user_input():
+    global base_salary, number_of_comissions
+    base_salary = float(input('Enter base salary:\n'))
+    number_of_comissions = float(input('Enter number of comissions:\n'))
+
+def calculate_comissions_to_pay_and_total_amount():
+    global comissions_to_pay
     comissions_to_pay = ((base_salary * PERCENTAGE) / 100) * number_of_comissions
     
-    print 'Comissions to pay: ' + str(comissions_to_pay) + '€'
-    print 'Total (base salary + comissions): ' + str(base_salary + comissions_to_pay) + '€'
+def print_comissions_to_pay_and_total_amount():
+    print ('Comissions to pay: ' + str(comissions_to_pay) + '€')
+    print ('Total (base salary + comissions): ' + str(base_salary + comissions_to_pay) + '€')
 
-print_comissions_to_pay_and_total_amount()
+main()

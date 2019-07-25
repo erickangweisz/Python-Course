@@ -3,10 +3,20 @@
 # conversión es:
 # C = (F-32)*5/9
 
-def convert_and_print_fahrenheit_to_celsius_gradees():
-    fahrenheit = float(raw_input('Enter fahrenheit degrees:\n'))
+def main():
+    get_user_input()
+    convert_fahrenheit_to_celsius_degrees()
+    print_celsius_degree()
+
+def get_user_input():
+    global fahrenheit 
+    fahrenheit = float(input('Enter fahrenheit degrees:\n'))
+
+def convert_fahrenheit_to_celsius_degrees():
+    global celsius
     celsius = (fahrenheit-32)*5/9
 
-    print 'Celsius degrees:', celsius
+def print_celsius_degree():
+    print ('Celsius degrees:', celsius)
 
-convert_and_print_fahrenheit_to_celsius_gradees()
+main()

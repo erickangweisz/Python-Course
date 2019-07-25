@@ -1,12 +1,21 @@
 # Calcular la media de tres números pedidos por teclado.
 
-def calculate_and_print_average():
-    inputs = [float(raw_input('Enter the first number:\n')),
-              float(raw_input('Enter the second number:\n')),
-              float(raw_input('Enter the thirst number:\n'))]
-
-    average = (inputs[0] + inputs[1] + inputs[2]) / len(inputs)
+def main():
+    get_user_input()
+    calculate_average()
+    print_average()
     
-    print average
+def get_user_input():
+    global inputs
+    inputs = [float(input('Enter the first number:\n')),
+              float(input('Enter the second number:\n')),
+              float(input('Enter the thirst number:\n'))]
 
-calculate_and_print_average()
+def calculate_average():
+    global average
+    average = (inputs[0] + inputs[1] + inputs[2]) / len(inputs)
+
+def print_average():
+    print (average)
+
+main()

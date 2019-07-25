@@ -1,13 +1,24 @@
 # Calcular el perímetro y área de un rectángulo dada su base y su altura.
 
-def calculate_and_print_perimeter_and_area_of_rectangle():
-    base = float(raw_input('Enter the base of the rectangle\n'))
-    height = float(raw_input('Enter the height of the rectangle\n'))
+def main():
+    get_user_input()
+    calculate_and_print_perimeter_and_area_of_rectangle()
+    print_petimeter_and_area()
 
+def get_user_input():
+    global base
+    global height
+    base = float(input('Enter the base of the rectangle\n'))
+    height = float(input('Enter the height of the rectangle\n'))
+
+def calculate_and_print_perimeter_and_area_of_rectangle():
+    global perimeter
+    global area
     perimeter = (2*height)+(2*base)
     area = height*base
 
-    print 'Perimeter:', perimeter
-    print 'Area:', area
+def print_petimeter_and_area():
+    print ('Perimeter:', perimeter)
+    print ('Area:', area)
 
-calculate_and_print_perimeter_and_area_of_rectangle()
+main()
